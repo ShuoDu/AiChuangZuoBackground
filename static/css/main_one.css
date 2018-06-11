@@ -1,0 +1,27 @@
+  ul{
+        margin:0px;
+        padding:0px;
+    }
+
+#table1 th{
+    text-align: center;
+    line-height: 40px;
+}
+  .nav-menu li{
+        float:left;
+        width:100px;
+        list-style: none;
+        text-align: center;
+        margin:0px 4px;
+        height: 30px;
+
+    }
+
+  .panel-body ul li a{
+      color: #4e555b;
+
+  }
+  .pagination{
+      text-align:center;
+      list-style-type:none;
+  }
