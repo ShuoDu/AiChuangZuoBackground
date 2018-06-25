@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+#list li a{background-color:blue}
+</style>
+</head>
+
+
+<body>
+ <ul id="list">
+      <li><a>a标签</a></li>
+      <li><a>b标签</a></li>
+      <li><a> c标签</a></li>
+  </ul>
+<script>
+var last = null;
+window.onload=function(){
+var a = document.getElementById("list").getElementsByTagName("a");
+for(i=0,len=a.length;i<len;i++){
+ a[i].onclick=function(){
+  if(last){
+  last.style.color="blue"
+  }
+  this.style.color="yellow"
+  last=this;
+ }
+}
+}
+</script>
+</body>

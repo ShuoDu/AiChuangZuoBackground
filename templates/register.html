@@ -2,7 +2,7 @@
 <html >
 <head>
 <meta charset="UTF-8">
-<title>Login Form</title>
+<title>注册</title>
 
 <link rel="stylesheet" href="/static/css/normalize.css">
 
@@ -66,8 +66,8 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
 
 </style>
 
-
-<script src="js/prefixfree.min.js"></script>
+{##}
+{#<script src="js/prefixfree.min.js"></script>#}
 
 
 </head>
@@ -75,21 +75,20 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
 <body>
 
 <div class="login" >
-	<h1>爱创作</h1>
-	<form id="reg_form2" method="post" action="/user/login_handle/">
+	<h1 >爱创作</h1>
+	<form id="reg_form2" method="post" action="/user/register/">
         {% csrf_token %}
 		<input type="text" name="uname" placeholder="用户名" required="required" />
-		<input type="password" name="upass" placeholder="密码" required="required" />
-		<button type="submit" class="btn btn-primary btn-block btn-large" href="/main/index/">登录</button>
+		<input type="password" name="upwd" placeholder="密码" required="required" />
+        <input type="password" name="upwdtwo" placeholder="确认密码" required="required" />
+         <input type="password" name="uphone" placeholder="手机号" required="required" />
+		<button type="submit" class="btn btn-primary btn-block btn-large" href="/user/register/">注册</button>
 	</form>
     <p> </p>
-    <a href="/user/register/" style="color: white; margin-left: 50px; margin-top: 20px">前往注册</a>
-    <a href="/user/change_pw/" style="color: white; margin-left: 70px">修改密码</a>
+    <a href="/user/login/" style="color: white; margin-left: 50px; margin-top: 20px">返    回</a>
+    <a href="#" style="color: white; margin-left: 70px">注册协议</a>
 </div>
-
-<div style="text-align:center;">
-{#<p>更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>#}
-</div>
+{#onclick="disp_prompt()#}
 
 </body>
 </html>

@@ -1,6 +1,17 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.db import models
+from base.base_manager import BaseManager
+
+# 素材管理器类
+class GoodsManager(BaseManager):
+    def get_deck_list(self):
+        deck_list = self.get_all_valid_fields()
+        return deck_list
+
+    def get_lingyu_byId(self, deck_id):
+        lingyu = self.get_object_list(id=deck_id)  # 根据id查找
+        return lingyu
 
 
 # 平台

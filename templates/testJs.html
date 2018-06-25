@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js练习</title>
+    <script src="/static/js/"></script>
+</head>
+<body>
+
+<script>
+    function testOneAc() {
+        pOne = document.getElementById("demo");
+        pOne.innerText = "这是什么贵";
+    }
+
+    function changeColor() {
+        pone = document.getElementById("pf");
+        pone.style.color = "#ff0000";
+        pone.style.fontSize = "20px";
+    }
+
+    function myFunction() {
+        var x = document.getElementById("demo").value;
+        if (x == "" || isNaN(x)) {
+            alert("不是数字");
+        }
+    }
+
+    {#    window.alert(5 + 6);#}
+    document.write(Date());
+    a = 5;
+    b = 6;
+    c = a + b;
+    console.log(c); //打印
+    var length = 16;                                  // Number 通过数字字面量赋值
+    var points = x * 10;                              // Number 通过表达式字面量赋值
+    var lastName = "Johnson";                         // String 通过字符串字面量赋值
+    var cars = ["Saab", "Volvo", "BMW"];              // Array  通过数组字面量赋值
+    var person = {firstName: "John", lastName: "Doe"};
+
+    function myFunction1(var1, var2) {
+        console.log("你是一个大傻子%s", var1);
+    }
+
+    /*
+    使用 window.alert() 弹出警告框。
+    使用 document.write() 方法将内容写到 HTML 文档中。
+    使用 innerHTML 写入到 HTML 元素。
+    使用 console.log() 写入到浏览器的控制台
+    */
+    //本例查找 id="main" 的元素，然后查找 id="main" 元素中的所有 <p> 元素：
+    var x = document.getElementById("main");
+    {#    var y = x.getElementsByTagName("p");#}
+
+</script>
+
+
+//改编标签内容
+<h1>我的第一段 JavaScript</h1>
+<p id="demo"> JavaScript 能改变 HTML 元素的内容。</p>
+
+
+<button type="button" onclick="testOneAc()">确定修改</button>
+
+//改编标签样式
+<p id="pf">你是你想要跑，偏偏注定要剁椒</p>
+
+<button type="button" onclick="changeColor()">修改颜色</button>
+
+<input id="demo" type="text">
+<button type="button" onclick="myFunction1(3223)">判断内容</button>
+
+<button onclick="this.innerHTML=Date()">现在的时间是?</button>
+
+<input type="button" onclick="AjaxSubmit();" value="提交ajax请求？">
+{% csrf_token %}
+
+<div>
+    <input type="button" onclick="AjaxSubmit_set();" value="提交集合">
+</div>
+
+
+<script language="javascript" type="text/javascript">
+           $(function () {
+               $("#examtype a").click(function () {
+                   $("#examtype a").each(function () {
+                       $(this).removeClass("cur");
+                   });
+                   $(this).attr('class', 'item cur');
+               });
+           });
+</script>
+
+
+<script src="/static/js/jquery-1.12.4.min.js"></script>
+<script>
+    function AjaxSubmit() {
+        var host = '1.1.1.1';
+        var port = '1111';
+        $.ajax({
+            url: "/testjs/",
+            type: 'POST',
+            data: {host: host, port: port},
+            success: function (arg) {
+
+            }
+        });
+    }
+
+    function AjaxSubmit_set() {
+        var data_list = [
+            {'name': 'chenchao', 'age': 18},
+            {'name': 'lisi', 'age': 19},
+            {'name': 'wangwu', 'age': 13}
+
+        ];
+
+        $.ajax({
+            url: "/testjs/",
+            type: 'POST',
+            tradition: true,
+            data: {data: JSON.stringify(data_list)},
+            success: function (arg) {
+                {#               console.log(arg);#}
+                var obj = jQuery.parseJSON(arg);
+
+                for (var i = 0; i < obj.length; i++) {
+                   console.log(obj[i].title);
+                }
+            }
+        });
+    }
+
+
+</script>
+
+
+</body>
+</html>
