@@ -12,7 +12,9 @@
            <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     <!-- 包含了所有编译插件 -->
             <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     {% endblock topfiles %}
+<script src="/static/js/main_header.js"></script>
 
 </head>
 
@@ -28,14 +30,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">爱创作</a>
+            <a class="navbar-brand" href="/tark/">爱创作</a>
         </div>
         <div class="collapse navbar-collapse" style="padding-left: 200px">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> 工作台</a></li>
-                <li><a href="#shop"><span class="glyphicon glyphicon-folder-close"></span> 新文</a></li>
-                <li><a href="#support"><span class="glyphicon glyphicon-fire"></span> 爆文</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-header"></span> 热门话题</a></li>
+                <li role="presentation" class="active" id="roleText1"><a  onclick="changeToText(1);" id="10" href="/tark/"><span class="glyphicon glyphicon-home"></span> 工作台</a></li>
+                <li role="presentation" id="roleText2"><a onclick="changeToText(2);" id="11" href="/index/" ><span class="glyphicon glyphicon-folder-close"></span> 新文</a></li>
+                <li role="presentation" id="roleText3"><a onclick="changeToText(3);" id="12" href="/baowen/"><span class="glyphicon glyphicon-fire"></span> 爆文</a></li>
+                <li role="presentation" id="roleText4"><a onclick="changeToText(4);" id="13" href="/talk/"><span class="glyphicon glyphicon-header"></span> 热门话题</a></li>
+                <li role="presentation" id="roleText5"><a  onclick="changeToText(5);"id="14" href="/movie/"><span class="glyphicon glyphicon-header"></span> 视频库</a></li>
             </ul>
             {% if uname %}
                 <ul class="nav navbar-nav navbar-right">

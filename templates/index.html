@@ -1,9 +1,7 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-{% block title %}爱创作-首页{% endblock title %}
+{% block title %}爱创作-新文{% endblock title %}
 {% block topfiles %}
-
-{% endblock topfiles %}
  <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
            <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- jQuery (Bootstrap 插件需要引入) -->
@@ -20,6 +18,8 @@
             $("#PageCount").val("89");
         }
     </script>
+{% endblock topfiles %}
+
 
 {% block body %}
 
@@ -34,7 +34,7 @@
                     {% for deck in deck %}
 {#                        <li><a href="javascript:void(0);"#}
 {#                               onclick="typeRequest('{{ deck.pingtai_name }}');">{{ deck.pingtai_name }}</a></li>#}
-                        <li><a href="/switch?type={{ deck.pingtai_name }}">{{ deck.pingtai_name }}</a></li>
+                        <li><a href="/index/switch?type={{ deck.pingtai_name }}">{{ deck.pingtai_name }}</a></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -119,10 +119,10 @@
     <ul class="pagination">
         <li><a href="#">上一页</a></li>
         <li class="active"><a href="/index/1/">1</a></li>
-        <li><a href="/index/2/">2</a></li>
-        <li><a href="/index/3/">3</a></li>
-        <li><a href="/index/4/">4</a></li>
-        <li><a href="/index/5/">5</a></li>
+        <li><a href="/index/index/2/">2</a></li>
+        <li><a href="/index/index/3/">3</a></li>
+        <li><a href="/index/index/4/">4</a></li>
+        <li><a href="/index/index/5/">5</a></li>
         <li><a href="#">6</a></li>
         <li><a href="#">7</a></li>
         <li><a href="#">8</a></li>

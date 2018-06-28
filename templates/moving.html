@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}爱创作-视频库{% endblock title %}
+{% block topfiles %}
+
+{% endblock topfiles %}
+ <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+           <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- jQuery (Bootstrap 插件需要引入) -->
+           <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <!-- 包含了所有编译插件 -->
+            <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link href="/static/res/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <script src="/static/res/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="/static/res/jqPaginator.min.js" type="text/javascript"></script>
+    <link href="/static/res/myPage.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript">
+        function loadData(num) {
+            $("#PageCount").val("89");
+        }
+    </script>
+
+{% block body %}
+    <h1 style="padding-top: 100px">视频库</h1>
+{% endblock body %}

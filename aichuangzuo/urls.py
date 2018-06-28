@@ -21,7 +21,12 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', include('main.urls', namespace='main')),
+    url(r'^', include('work_tark.urls', namespace='main')),
+    url(r'^index/', include('main.urls')),
     url(r'^sucai/', include('sucai.urls')),
     url(r'^user/', include('usermanage.urls')),
+    url(r'^baowen/', include('baowen.urls')),
+    url(r'^talk/', include('talkings.urls')),
+    url(r'^movie/', include('movigs.urls')),
+    url(r'^tark/', include('work_tark.urls')),
 ]

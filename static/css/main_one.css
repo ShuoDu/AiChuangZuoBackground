@@ -6,6 +6,10 @@
 #table1 th{
     text-align: center;
 }
+/*#table1 th tr td{*/
+/*height: 120px;*/
+/*max-height: 120px;*/
+/*}*/
 
   .nav-menu li{
         float:left;
@@ -25,3 +29,4 @@
       text-align:center;
       list-style-type:none;
   }
+
